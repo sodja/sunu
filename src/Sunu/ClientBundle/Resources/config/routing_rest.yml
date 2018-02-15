@@ -1,0 +1,4 @@
+comptes : 
+  type: rest
+  resource:     "SunuUserBundle:UserRest"
+  name_prefix:  api_

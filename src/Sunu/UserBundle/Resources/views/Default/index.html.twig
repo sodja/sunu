@@ -1,0 +1,95 @@
+{% extends "::menu.html.twig" %}
+{% block title %}
+   <center> <h3>Tableau de bord</h3> </center>
+{% endblock %}
+
+
+{% block body %}
+                <div class="row top_tiles">
+                    <a href="{{path('sunu_liste_user')}}"> 
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-users"></i></div>
+                          <div class="count">{{ nbreuser }}</div>
+                            <h3>Utilisateurs</h3>
+                          <p>Le total des utilisateurs de l'application.</p>
+                        </div>
+                      </div>
+                    </a> 
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-comments-o"></i></div>
+                          <div class="count"></div>
+                          <h3>Clients</h3>
+                          <p>Total Client.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
+                          <div class="count">{{ nbreuser }}</div>
+                          <h3>utilisateurs</h3>
+                          <p>avec -100 de clients.</p>
+                        </div>
+                      </div>
+                      <a href="{{path('sunu_liste_user_connecte')}}"> 
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-check-square-o"></i></div>
+                          <div class="count">{{ users }} </div>
+                          <h3>Connecté</h3>
+                          <p>utilisateurs en ligne.</p>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Top des utilisateurs<small>/clients</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                {% for nbrecls in nbrecl %}  
+                                    <article class="media event">
+                                        <a class="pull-left border-aero profile_thumb">
+                                            <i class="fa fa-user aero"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="title" href="#">{{ nbrecls.username }}</a>
+                                            <p>{{ nbrecls.nom }} {{ nbrecls.prenom }} </p>
+                                            <p>Nombre de client:{{ nbrecls.nbre }}</p>
+                                        </div>
+                                    </article>
+                                 {% endfor %}    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Top des utilisateurs<small>Commandes</small></h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content"> 
+                                    <article class="media event">
+                                        <a class="pull-left border-aero profile_thumb">
+                                            <i class="fa fa-user aero"></i>
+                                        </a>
+                                        <div class="media-body">
+                                            
+                                        </div>
+                                    </article>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>                               
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

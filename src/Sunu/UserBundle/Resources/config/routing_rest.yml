@@ -1,0 +1,10 @@
+#src/Obtao/UserBundle/Resources/config/routing_rest.yml
+users : 
+  type: rest
+  resource:     "SunuUserBundle:UserRest"
+  name_prefix:  api_
+
+client : 
+  type: rest
+  resource:     "SunuClientBundle:ClientRest"
+  name_prefix:  api_

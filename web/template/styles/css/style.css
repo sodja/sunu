@@ -1,0 +1,28 @@
+.body {
+    background-color: #009688;
+    border-radius: 5px;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: 'Roboto', Arial, Tahoma, sans-serif;
+}
+
+.page_connexion {
+    background: #ccc;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 0;
+    max-width: 360px;
+    margin: 0% auto;
+    overflow-x: hidden;
+}
+
+.login_wrapper {
+    right: 0px;
+    margin: 0px auto;
+    height: 100%;
+    margin-top: 5%;
+    max-width: 350px;
+    position: relative
+}

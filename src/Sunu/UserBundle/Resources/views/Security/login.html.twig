@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "SunuUserBundle::style.html.twig" %}
+
+{% block fos_user_content %}
+
+<header>
+<center><h3>Connexion</h3></center>
+</header>
+{% if error %}
+<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+    <div class="input-group">
+    <span class="input-group-addon">
+    <i class="material-icons">person</i>
+    </span>
+    <input type="text" class="form-control" placeholder="  numero" id="username" name="_username" value="{{ last_username }}" required="required" />
+    </div>
+    <div class="input-group">
+    <span class="input-group-addon">
+    <i class="material-icons">lock</i>
+    </span>
+    <input type="password" class="form-control" placeholder="mot de passe" id="password" name="_password" required="required" />
+    </div>
+    <input type="checkbox" id="remember_me" class="change_link" name="_remember_me" value="on" />
+    <label for="remember_me">Se Souvenir de Moi    </label>
+    <br/>
+    <input type="submit" id="_submit" name="_submit" value="Connexion" />
+     <br/>
+    <br/>
+         <button align="rigth"><a href="{{path('fos_user_registration_register')}}">S'inscrire</a></button>
+</form>
+{% endblock fos_user_content %}

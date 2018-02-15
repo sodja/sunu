@@ -1,0 +1,35 @@
+{% extends "::menu.html.twig" %}
+{% block title %}
+   <center> <h3>Les utilisateurs en ligne</h3> </center>
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+				<thead class="entete_tableau">
+					<tr>
+					    <td align="center">Nom</td>
+                        <td align="center">Téléphone</td>
+						<td align="center">Actions</td>
+					</tr>
+				</thead>
+        </tbody>
+            {% for listeusers in listeusers %}
+                    <tr>
+                        <td align="center">{{ listeusers.nom }}</td>
+                        <td align="center">{{ listeusers.username }}</td>
+                        <td align="center">
+                            <a href="" class="btn btn-warning"><span class="glyphicon glyphicon-edit  " aria-hidden="true"></span></a>
+                        </td>
+                    </tr>          
+            {% else %}
+                    <li>Pas d'utilisateur pour le moment</li>
+            {% endfor %}
+        </tbody>
+    </table> 
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

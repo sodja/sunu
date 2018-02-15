@@ -1,0 +1,19 @@
+sunu_user:
+    path:     /accueil
+    defaults: { _controller: SunuUserBundle:Default:accueil }
+
+sunu_liste_user:
+    path:     /les_utilistaeurs
+    defaults: { _controller: SunuUserBundle:Default:listeutilisateur } 
+
+sunu_liste_user_connecte:
+    path:     /les_utilistaeurs_connecte
+    defaults: { _controller: SunuUserBundle:Default:listeutilisateurConnecter }           
+
+sunu_liste_user_infos:
+    path:     /les_utilistaeurs_details
+    defaults: { _controller: SunuUserBundle:Default:infoUsers }           
+        
+sunu_accueil:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }

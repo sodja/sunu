@@ -1,0 +1,4 @@
+services:
+#    sunu_client.example:
+#        class: Sunu\ClientBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
